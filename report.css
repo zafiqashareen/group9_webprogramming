@@ -1,0 +1,68 @@
+
+body 
+{
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  background-color : #FFDFA2;
+}
+
+
+main 
+{
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 4em;
+	display: block;
+	
+	background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size : cover;
+    width: 1350px;
+    height: 1300px;
+}
+
+footer
+{
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.jumbotron
+{
+	color : #141311;
+	opacity : 0.65;
+}
+
+.dropdown
+{
+    color: white;
+    padding: 16px;
+    font-size: 17px;
+    border: none;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #141311;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropdown-menu
+{
+    background-color: #A8A5FF ;
+}
+
+
+
+
+
+
+

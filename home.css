@@ -1,0 +1,68 @@
+html,
+body
+{
+	height: 100%;
+}
+
+body 
+{
+  background-color : #e2e2e2;
+}
+nav
+{
+	text-align: center;
+	font-size: 1.0em;
+}
+
+nav a { text-decoration: none;}
+main 
+{
+	color : black;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 4em;
+	padding-top: 6em;
+	display: block;
+	
+	background-image: url(2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size : cover;
+    width: 1519px;
+    height: 1100px;
+	
+}
+
+footer
+{
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.jumbotron
+{
+	color : #141311;
+	opacity : 0.90;
+}
+
+#delete {
+    display: inline;
+}
+
+#Back
+{
+	display: inline;
+}
+
+
+.glyphicon.glyphicon-book {
+    font-size: 1em;
+}
+
+
+
+
+
+

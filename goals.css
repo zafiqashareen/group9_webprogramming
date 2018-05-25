@@ -1,0 +1,47 @@
+body
+ {
+	padding-top: 2rem;
+	padding-bottom: 0.5rem;
+	background-color : #FFDFA2;
+ }
+
+nav
+{
+	text-align: center;
+	font-size: 1.0em;
+	padding-top: 10px;
+}
+
+nav a 
+{ text-decoration: none;}
+ 
+main 
+{
+	color : black;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 4em;
+	display: block;
+	
+	background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size : cover;
+    width: 1350px;
+    height: 850px;
+	
+}
+
+footer
+{
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.jumbotron
+{
+	color : #141311;
+	opacity : 0.80;
+}
