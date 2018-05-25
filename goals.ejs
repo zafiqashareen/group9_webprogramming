@@ -1,0 +1,57 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+    <main>
+	<div class = "jumbotron">
+        <div class="page-header">
+           <div class="container">
+	
+      <div class="py-5 text-center">
+        <h1>Personal Finance Goal</h1> 
+        <p class="lead">Are you dreaming of that island vacation? Or that dream house? Set your saving plan and achieve your goals now!</p>
+		</div></div>
+        
+		<div class="row">
+        <div class="py-5 text-center">
+		 <h2 class="mb-3">Set Your Goal!</h2>
+		</div>
+		 
+        <form class="form-horizontal" action="/goal_blogs/indexg" method="POST">
+			<div class="form-group">
+                <label for="title" class="col-sm-3 control-label">Goal Name</label>
+                <div class="col-sm-6">
+						<input type="text" class="form-control" name="goal_blogs[title]" placeholder="e.g. Travel to Canada!" >
+				</div>
+		    </div>
+					
+			<div class="form-group">
+				<label for="body" class="col-sm-3 control-label">Total Savings Goal (RM)</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" name="goal_blogs[body]" placeholder="0.00" >
+					</div>
+            </div>		
+			
+		<div class="form-group">
+                <label for="total" class="col-sm-3 control-label">Total Savings Duration in Month(s)</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control" name="goal_blogs[total]" placeholder="e.g. 5" >
+					</div>
+		</div>
+
+            <div class="col-sm-offset-2 col-sm-10">
+                <input class="btn btn-primary" type="submit">
+				<input class="btn btn-light" type="reset">
+				<a class="btn btn-info" href="/goal_blogs/indexg" role="button">View Goals</a>
+            </div>
+        </form>
+		<br><br><br>
+	  </div>	</div></div></div></div></div>
+		</div>
+    </main>
+</div>
+
+<% include ./partials/footer %>
+

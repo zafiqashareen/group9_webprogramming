@@ -1,0 +1,35 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+    <main>
+	    <div class="jumbotron">
+        <div class="page-header">
+            <h2>Your Goals!</h2>
+        </div>
+		<hr class = "a">
+            <% goal_blogs.forEach(function(goal_blogs){ %>
+                <div class="row" id="item">
+                    <div class="content">
+                        <h2><a href="/goal_blogs/<%= goal_blogs._id %>"><%=goal_blogs.title%></a></h2>  						
+						<div class="description">
+                             <p>RM<%- goal_blogs.body%></p>
+                        </div>						                     
+						 <div class="meta">
+                             <span><%= goal_blogs.created.toDateString() %></span>
+                        </div>
+                         <div class="extra">
+                                 <p><a class="btn btn-primary" href="/goal_blogs/<%= goal_blogs._id %>" role="button">More info &raquo;</a></p>
+                         </div>
+						 
+                    </div>
+                </div>
+            <% }) %>
+			<a class="btn btn-info" href="/goals">Back</a>
+        </div>     
+    </main>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,89 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+
+    <main>
+        <div class="page-header">
+		<div class = "jumbotron">
+            <h2>Your Daily Expenses</h2>
+			<h4>Look after where your money goes AND Keep track of the flow of your money.</h4>
+		
+		</div>
+        </div>
+		<div class = "jumbotron">
+        <form class="form-horizontal" action="/blogs" method="POST" id="CategoryForm">
+		<fieldset>
+			<!-- //TITLE -->
+            <div class="form-group">
+                <label for="title" class="col-sm-2 control-label">Item</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="blog[title]" placeholder="e.g. Fried Chicken, Shopping, Electric Bills" >
+                </div>
+            </div>
+			
+			<!-- //CATEGORY -->
+<!--        <div class="form-group">
+                <label for="category" class="col-sm-2 control-label" name="blog[category]">Category</label>
+				<div class="form-group row">
+					<div class="col-sm-3">
+						<input type="radio" name="category" value="food" checked="checked"> Food<br>
+						<input type="radio" name="category" value="entertainment"> Entertainment<br>
+						<input type="radio" name="category" value="clothes"> Clothes
+					</div>
+					<div class="col-sm-3">
+						<input type="radio" name="category" value="health"> Health<br>
+						<input type="radio" name="category" value="bills"> Bills<br>
+						<input type="radio" name="category" value="travel"> Travelling
+					</div>		
+					<div class="col-sm-3">
+						<input type="radio" name="category" value="college"> College<br>
+						<input type="radio" name="category" value="services"> Services<br>
+						<input type="radio" name="category" value="other"> Other
+					</div>
+				</div>
+            </div>
+-->
+
+			<div class="form-group">
+                <label for="category" class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="blog[category]" placeholder="e.g. Food, Entertainment, Bills, College">
+                </div>				
+			</div>
+			
+			<!-- //AMOUNT -->
+            <div class="form-group">
+                <label for="amount" class="col-sm-2 control-label">Amount (RM)</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="blog[amount]" placeholder="0.00" >
+                </div>
+            </div>	
+
+			<!-- //NOTES -->
+            <div class="form-group">
+                <label for="blog" class="col-sm-2 control-label">Notes</label>
+                <div class="col-sm-6">
+                    <textarea name="blog[body]" class="form-control" rows="4" cols="6" placeholder="e.g. Lunch"></textarea>
+                </div>
+            </div>
+			
+            <div class="col-sm-offset-2 col-sm-10">
+                <input class="btn btn-primary" type="submit">
+				<input class="btn btn-light" type="reset">
+				<a class="btn btn-info" href="/blogs/" role="button">View Expenses</a>
+            </div>
+		</fieldset>
+        </form>
+		<br><br><br>
+		</div>
+		
+		
+	  </div>		
+    </main>
+</div>
+
+<% include ./partials/footer %>
+

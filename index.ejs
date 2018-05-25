@@ -1,0 +1,46 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+    <main>
+		<div class = "jumbotron">
+        <div class="page-header">
+            <h2>Expenses History</h2>
+			<h3>See everything in one place.</h3>
+			<h4>It's your financial life, in one place that's easy to understand.</h4>
+			<br></br>
+        </div> 
+		
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Date</th>
+					<th scope="col">Item</th>
+					<th scope="col">Category</th>
+					<th scope="col">Amount (RM)</th>
+					<!-- <th scope="col">Notes</th> -->
+				</tr>
+			</thead>			
+			<% blogs.forEach(function(blog) { %>
+				<div class="content">															  
+					<tbody>
+						<tr>
+							<th scope="row"><%= blog.created.toDateString() %> </th>
+							<td><a href="/blogs/<%= blog._id %>"><%=blog.title%></a></td>
+							<td><%=blog.category%></a></td>
+							<td><%=blog.amount%></td>
+							<!-- <td><%=blog.body%></td> -->
+						</tr>
+					</tbody>
+				</div>              
+			<% }) %>    
+		</table> 
+		<a type="button" class="btn btn-dark" href=/blogs/new>+ Add new expense</a>
+		</div>
+			<br><br><br>
+    </main>
+</div>
+
+<% include ./partials/footer %>

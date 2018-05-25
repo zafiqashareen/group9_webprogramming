@@ -1,0 +1,52 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+    <main>
+		<div class = "jumbotron">
+        <div class="page-header">
+            <h1>Edit <%= goal_blogs.title %></h1>
+        </div>
+		<hr class = "a">
+		
+        <form class="form-horizontal" action="/goal_blogs/<%= goal_blogs._id %>?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="title" class="col-sm-3 control-label">Goal Name</label>
+				<div class="col-sm-6">
+						<input type="text" class="form-control" name="goal_blogs[title]" value="<%= goal_blogs.title %>">
+				</div>
+		    </div>
+					
+			<div class="form-group">
+				<label for="body" class="col-sm-3 control-label">Total Savings Goal (RM)</label>
+				<div class="col-sm-1">
+						<input type="text" class="form-control" name="goal_blogs[body]" value="<%= goal_blogs.body %>">
+				</div>
+			</div>		
+			
+		<div class="form-group">
+                <label for="total" class="col-sm-3 control-label">Total Savings Duration</label>
+					<div class="col-sm-1">
+						<input type="text" class="form-control" name="goal_blogs[total]" value="<%= goal_blogs.total %>">
+					</div>
+			<div class="col-md-4 mb-3">
+                <label for="duration"></label>
+					<select class="custom-select d-block w-100" id="duration" required>
+						<option value="">Choose..</option>
+						<option>Month(s)</option>
+						<option>Year(s)</option>
+					</select>
+            </div>
+        </div>
+		
+			<div class="col-sm-offset-3 col-sm-10">
+                <input class="btn btn-primary" type="submit">
+            </div></div>
+        </form>
+    </main>
+</div>
+
+
+<% include ./partials/footer %>

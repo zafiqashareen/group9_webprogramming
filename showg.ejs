@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+    <main>
+		<div class="jumbotron">
+        <div class="page-header">
+            <h1><%= goal_blogs.title %></h1>
+        </div>
+		<hr class = "a">
+        
+            <div class="item">
+                <div class="description">
+					<p>Your total savings goal for <%= goal_blogs.title %> is RM<%- goal_blogs.body %>. </p>
+					<p>In order to reach your goal, you need to save RMXX per week for <%- goal_blogs.total %> <% goal_blogs.duration %> month(s).</p>
+					<p>You better start saving now!</p>
+					<br>P/S: Every penny is a step closer to your <%= goal_blogs.title %>.
+                </div>
+                <br><a class="btn btn-primary" href="/goal_blogs/<%= goal_blogs._id %>/edit">Edit</a>
+                <form id="delete" action="/goal_blogs/<%= goal_blogs._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-primary" Onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+					<a class="btn btn-info" href="/goal_blogs/indexg">Back</a>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<% include ./partials/footer %>
+

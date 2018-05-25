@@ -1,0 +1,78 @@
+<% include ./partials/header %>
+
+<!-- Custom styles for this template -->
+	<link href="/home.css" rel="stylesheet">
+
+<div class="container">
+    <main>
+	
+	<div class = "jumbotron">
+        <div class="page-header">
+			<h3><%= blog.title %></h3>
+			Created on: <span><%= blog.created.toDateString() %> </span><br>
+        </div>
+		<hr class = "a">
+        <form class="form-horizontal" action="/blogs/<%= blog._id %>?_method=PUT" method="POST">	
+			<!--//TITLE -->
+			<div class="form-group">
+                <label for="title" class="col-sm-2 control-label">Title</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="blog[title]" value="<%= blog.title %>">
+                </div>
+            </div>
+			
+			<!-- //CATEGORY-->
+<!--        <div class="form-group">
+               <label for="category" class="col-sm-2 control-label" name="blog[category]" value="<%= blog.category %>">Category</label>
+				<div class="form-group row">
+					<div class="col-sm-3">
+						<input type="radio" name="category" value="food"> Food<br>
+						<input type="radio" name="category" value="entertainment"> Entertainment<br>
+						<input type="radio" name="category" value="clothes"> Clothes
+					</div>
+					<div class="col-sm-3">
+						<input type="radio" name="category" value="health"> Health<br>
+						<input type="radio" name="category" value="bills"> Bills<br>
+						<input type="radio" name="category" value="travel"> Travelling
+					</div>		
+					<div class="col-sm-3">
+						<input type="radio" name="category" value="college"> College<br>
+						<input type="radio" name="category" value="services"> Services<br>
+						<input type="radio" name="category" value="other"> Other
+					</div>					
+				</div>
+            </div>	-->	
+			
+			<div class="form-group">
+                <label for="category" class="col-sm-2 control-label">Category</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="blog[category]" value="<%= blog.category%>">
+                </div>				
+			</div>
+			
+			
+			<!-- //AMOUNT-->
+            <div class="form-group">
+                <label for="blog" class="col-sm-2 control-label">Amount (RM)</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" name="blog[amount]" value="<%= blog.amount %>" >
+                </div>
+            </div>			
+			
+			<!--//NOTES -->
+            <div class="form-group">
+                <label for="blog" class="col-sm-2 control-label">Notes</label>
+                <div class="col-sm-6">
+                    <textarea name="blog[body]" class="form-control" rows="4" cols="6"><%= blog.body %></textarea>
+                </div>
+            </div>			
+			
+            <div class="col-sm-offset-2 col-sm-10">				
+                <input class="btn btn-primary" type="submit">
+            </div>
+        </form>
+	</div>
+    </main>
+</div>
+
+<% include ./partials/footer %>

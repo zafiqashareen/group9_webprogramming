@@ -1,0 +1,46 @@
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	<!-- content goes in the body -->
+	<div id="wrapper"> </div>	
+		
+	<!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">	
+		
+	<!-- Custom styles for this template -->
+    <link href="/signup.css" rel="stylesheet">
+
+<div class = "container">
+	<div class = "jumbotron">
+	<div class="py-5 ">
+	
+		<h2 class="text-center">Sign Up</h2>
+		<br>
+		<form action="/register" method="POST" class="form-signin">
+			<div class="form-group">
+				<label for="username">Email:</label>
+					<input class="form-control" type="text" name="username" placeholder="Create a username">
+				<br>
+				<label for="password">Password:</label>
+				<input class="form-control" type="password" name="password" placeholder="Create a password">
+				<br>
+				<button type="submit" class="btn btn-primary">Click to submit</button>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+<% include partials/footer %> 
